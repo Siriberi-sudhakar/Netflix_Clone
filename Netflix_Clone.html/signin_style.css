@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    width: 100%;
+    height: 140%;
+    background: url("images/header-img.jpg");
+    background-position: center;
+}
+
+nav {
+    position: fixed;
+    padding: 25px 60px;
+    z-index: 1;
+}
+
+nav a img {
+    width: 167px;
+}
+
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+
+.form-wrapper h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+    background: #444;
+    padding: 16px 20px 0;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-180%);
+}
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+form button:hover {
+    background: #c40812;
+}
+
+.form-wrapper a {
+    text-decoration: none;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.form-wrapper :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .remember-me {
+    display: flex;
+}
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+
+.form-wrapper p a {
+    color: #fff;
+}
+
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+
+.form-wrapper small a {
+    color: #0071eb;
+}
+
+
+.bottom{
+    background-color: rgba(18, 17, 17, 0.85);
+    opacity: 5px;
+    color: #757575;
+    position: relative;
+    top: 101vh;
+}
+
+.bottom-width{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.mail-link{
+    text-decoration: none;
+    color: #757575;
+}
+
+.bottom-flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.bottom-flex li{
+    list-style: none;
+}
+
+.list-bottom{
+    width: 25%;
+    margin-top: 10px;
+}
+
+.link-bottom{
+    text-decoration: none;
+    color: #757575;
+    font-size: 0.8rem;
+}
+
+.link-bottom:hover{
+    text-decoration: underline;
+}
+
+.signup-link:hover{
+    text-decoration: underline;
+}
+
+.help a{
+    text-decoration: none;
+}
+
+.help a:hover{
+    text-decoration: underline;
+}
+
+.mail-link:hover{
+    text-decoration: underline;
+}
+
+.select-language{
+    background-color: #000;
+    color: #757575;
+    padding: 14px 20px 14px 14px;
+    margin: 30px 0 40px 0;
+    border: 1px solid #333;
+}
+
+.signup-link{
+    color: white;
+    text-decoration: none;
+}
+
+.protection{
+    font-size: 0.8rem;
+    color: #8c8c8c;
+
+}
+
+.protection a{
+    text-decoration: none;
+
+}
+
+.protection a:hover{
+    text-decoration: underline;
+
+}
+
+.others{
+    margin: 0 auto;
+    width: 310px;
+    padding: 80px 0px 14px 0px;
+}
+
+.new-members{
+    margin-bottom: 10px;
+    color:#8c8c8c;
+}
+
+
+
+
+
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+
+    nav, .form-wrapper {
+        padding: 20px;
+    }
+
+    nav a img {
+        width: 100px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        top: 43%;
+    }
+    .form-wrapper h2{
+        font-size: large;
+    }
+ 
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
+}
